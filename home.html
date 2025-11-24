@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Examen Manipulación de Alimentos | Práctica Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SIMPLE -->
+    <nav class="navbar">
+        <div class="nav-content" style="padding: 0 2rem;">
+            <a href="home.html">
+                <img src="logo-test-manipulador.png" style="height:100px; vertical-align:middle;"
+                    alt="Logo Test de Manipulador">
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (EL ENCABEZADO GRANDE) -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>SIMULADOR DE EXAMEN DE MANIPULADOR DE ALIMENTOS (CABA)</h1>
+            <p class="hero-subtitle">
+                Practica con preguntas similares a las del examen oficial de la AGC para obtener el Certificado de
+                Manipulación de Alimentos.<br>
+                Todo el contenido está actualizado según el Manual Oficial de Manipulación de Alimentos (AGC – CABA).
+            </p>
+        </div>
+    </header>
+
+    <main class="container main-content">
+
+        <!-- ZONA PUBLICIDAD (COMENTADA) 
+        <div class="ad-slot">
+            <span>Espacio Publicitario</span>
+        </div>
+        -->
+
+        <!-- PANTALLA DE INICIO -->
+        <section id="start-screen" class="screen active">
+            <div class="card start-card">
+                <div class="icon-header">📋</div>
+                <button id="start-btn" class="btn btn-primary btn-lg" style="margin-bottom: 1rem;">COMENZAR
+                    SIMULACRO</button>
+                <p style="color: var(--text-light);">Este test no guarda tus datos ni emite certificado. Su único fin es
+                    ayudarte a estudiar.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🔀</span>
+                        <span><strong>20 Preguntas</strong><br>Aleatorias por intento</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📚</span>
+                        <span><strong>Temario Oficial</strong><br>BPM, ETAs y Normas</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <span><strong>Corrección</strong><br>Al finalizar el test</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANTALLA DEL TEST -->
+        <section id="quiz-screen" class="screen hidden">
+            <div class="progress-container">
+                <div class="progress-labels">
+                    <span id="question-counter">Pregunta 1 / 20</span>
+                    <span>Progreso</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 id="question-text">Cargando pregunta...</h3>
+                <div id="options-container">
+                    <!-- Opciones generadas por JS -->
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn btn-primary" disabled>Siguiente 👉</button>
+                <button id="finish-btn" class="btn btn-success hidden">Ver Resultados 🏁</button>
+            </div>
+        </section>
+
+        <!-- PANTALLA DE RESULTADOS -->
+        <section id="result-screen" class="screen hidden">
+            <div class="card result-card">
+                <h2>Resultado del Simulacro</h2>
+
+                <div class="score-box">
+                    <span class="score-label">Tu Puntuación</span>
+                    <div class="score-circle">
+                        <span id="final-score">0</span>%
+                    </div>
+                </div>
+
+                <p id="result-message" class="result-msg">...</p>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="location.reload()">🔄 Intentar Nuevo Test</button>
+                </div>
+            </div>
+
+            <div id="detailed-results">
+                <!-- Revisión JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Importante:</strong> Este sitio es una herramienta de estudio independiente y gratuita.</p>
+            <p>No tenemos relación con el Gobierno de la Ciudad ni emitimos el carnet oficial.</p>
+        </div>
+    </footer>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
