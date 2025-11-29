@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manipulador-alimentos.vercel.app/sitemap.xml
