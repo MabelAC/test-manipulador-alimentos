@@ -819,7 +819,7 @@ const questionBank = [
     },
     {
         id: 96,
-       question: "¿Por qué no se debe dar miel a menores de 1 año?",
+       uestion: "¿Por qué no se debe dar miel a menores de 1 año?",
         options: ["Por el riesgo de Botulismo del Lactante.", "Porque es muy dulce y daña los dientes.", "Porque pueden ahogarse.", "Porque tiene mucha grasa."],
         answer: 0,
         explanation: "La miel puede contener esporas de Clostridium botulinum. El sistema digestivo inmaduro de los bebés no puede combatirlas y genera la toxina mortal."
@@ -847,9 +847,1224 @@ const questionBank = [
     },
     {
         id: 100,
-        question: "Al servir la mesa, ¿cómo se deben tomar los vasos y copas?",
-        options: ["Por el borde superior.", "Metiendo los dedos adentro.", "Por la base o el tallo.", "Con la mano completa."],
+        question: "¿Qué se debe hacer si se corta la luz por muchas horas?",
+        options: ["Abrir la heladera a cada rato para revisar.", "Mantener las puertas cerradas lo más posible y evaluar temperatura al volver la luz.", "Volver a congelar todo.", "Cocinar todo al día siguiente."],
+        answer: 1,
+        explanation: "Mantener cerrado conserva el frío. Si los alimentos superaron los 5°C por más de 2 horas, hay que descartar."
+    },
+    {
+        id: 101,
+        question: "Situación: Tienes que ir al baño en medio de tu turno de trabajo. ¿Qué haces con el delantal/uniforme?",
+        options: [
+            "Me lo dejo puesto para no perder tiempo.", 
+            "Me lo quito antes de entrar al baño.", 
+            "Solo me saco la cofia.", 
+            "Me pongo un abrigo encima."
+        ],
+        answer: 1,
+        explanation: "El uniforme de trabajo nunca debe ingresar al baño (zona sucia), ya que se carga de bacterias fecales del ambiente. (Manual pág. 14)"
+    },
+    {
+        id: 102,
+        question: "¿Cómo deben servirse los aderezos (mayonesa, kétchup) en la mesa de un restaurante?",
+        options: [
+            "En frascos rellenables.", 
+            "En sachets individuales (monodosis) o envases originales no rellenables.", 
+            "En potes abiertos con cuchara.", 
+            "Sueltos en el plato."
+        ],
+        answer: 1,
+        explanation: "Está prohibido rellenar frascos de aderezos por el riesgo de contaminación y pérdida de cadena de frío. Se deben usar sobres individuales. (Manual pág. 33)"
+    },
+    {
+        id: 103,
+        question: "Situación: Estás cortando fiambre y la máquina se ensucia mucho. ¿Cada cuánto debes limpiarla a fondo?",
+        options: [
+            "Una vez a la semana.", 
+            "Cada vez que cambio de fiambre y al finalizar el día desarmando las piezas.", 
+            "Solo cuando se traba.", 
+            "Una vez al mes."
+        ],
+        answer: 1,
+        explanation: "La cortadora de fiambre es un punto crítico. Se debe sanear diariamente y evitar la contaminación cruzada entre distintos fiambres. (Manual pág. 33)"
+    },
+    {
+        id: 104,
+        question: "¿Es seguro guardar lavandina o detergente en botellas vacías de gaseosa o agua mineral?",
+        options: [
+            "Sí, si le pongo un cartelito.", 
+            "No, NUNCA. Es causa frecuente de intoxicación accidental grave.", 
+            "Sí, es práctico.", 
+            "Solo si la botella es transparente."
+        ],
+        answer: 1,
+        explanation: "Está prohibido trasvasar químicos a envases de alimentos. Confunde al usuario y puede ser fatal si se ingiere por error. (Manual pág. 16 - Depósito de limpieza)"
+    },
+    {
+        id: 105,
+        question: "Si un compañero estornuda directamente sobre la comida que está preparando, ¿qué debe hacerse con esa comida?",
+        options: [
+            "Mezclarla bien.", 
+            "Calentarla un poco.", 
+            "Descartarla por completo.", 
+            "Servirla igual."
+        ],
         answer: 2,
-        explanation: "Nunca tocar la zona donde el cliente pondrá la boca."
+        explanation: "La comida recibió una lluvia de gotas de saliva con bacterias (Staphylococcus aureus, virus, etc.). No es recuperable y debe tirarse."
+    },
+    {
+        id: 106,
+        question: "Saliste del baño y vas directo a amasar sin lavarte las manos. ¿Qué riesgo hay?",
+        options: [
+            "Ninguno si usé papel higiénico.", 
+            "Riesgo de transmisión Fecal-Oral (Hepatitis A, Shigella, etc.).", 
+            "Solo se ensucia la masa con polvo.", 
+            "Está bien si uso alcohol en gel."
+        ],
+        answer: 1,
+        explanation: "La falta de lavado de manos post-baño es una de las causas principales de brotes de enfermedades. El alcohol no reemplaza el lavado si hay suciedad. (Manual pág. 10)"
+    },
+    {
+        id: 107,
+        question: "¿Se puede barrer en seco (con escoba) mientras se está elaborando comida?",
+        options: [
+            "Sí, para mantener limpio.", 
+            "No, porque levanta polvo y microorganismos que caen en la comida.", 
+            "Sí, si barro despacito.", 
+            "Solo si hay mucha tierra."
+        ],
+        answer: 1,
+        explanation: "El barrido en seco levanta contaminación del aire. Se deben usar métodos húmedos o limpiar cuando no se esté cocinando. (Manual pág. 19 - POES)"
+    },
+    {
+        id: 108,
+        question: "Estás cobrando en la caja y manejando dinero. ¿Puedes ir a servir comida inmediatamente?",
+        options: [
+            "Sí, es rápido.", 
+            "No. Debo lavarme las manos o usar utensilios/guantes exclusivos para servir.", 
+            "Sí, si me limpio en el pantalón.", 
+            "Solo si el cliente no mira."
+        ],
+        answer: 1,
+        explanation: "El dinero es un objeto muy sucio. Nunca se debe tocar alimento directo después de tocar billetes sin higienizarse. (Manual pág. 31/33)"
+    },
+    {
+        id: 109,
+        question: "¿Qué característica deben tener los pisos y paredes de una cocina habilitada?",
+        options: [
+            "Ser de madera.", 
+            "Tener alfombras.", 
+            "Ser lisos, impermeables, lavables y de color claro.", 
+            "Ser de ladrillo a la vista."
+        ],
+        answer: 2,
+        explanation: "Las superficies deben permitir una fácil limpieza y visualización de la suciedad. (Manual pág. 14)"
+    },
+    {
+        id: 110,
+        question: "¿Cómo reconoces que un pescado fresco está en buen estado?",
+        options: [
+            "Ojos hundidos y opacos.", 
+            "Ojos brillantes y saltones, agallas rojas y carne firme.", 
+            "Olor fuerte a amoníaco.", 
+            "Escamas que se salen solas."
+        ],
+        answer: 1,
+        explanation: "Estos son los signos de frescura. Si tiene olor fuerte o carne blanda, se rechaza. (Manual pág. 26 - Colores de tablas, implícito frescura)"
+    },
+    {
+        id: 111,
+        question: "¿Las luces o tubos fluorescentes de la cocina deben tener protección?",
+        options: [
+            "No hace falta.", 
+            "Sí, protección anti-estallido para que si explotan no caigan vidrios a la comida.", 
+            "Solo si son LED.", 
+            "Solo si están bajos."
+        ],
+        answer: 1,
+        explanation: "Es una norma de seguridad física obligatoria para evitar contaminación física con vidrios. (Manual pág. 15)"
+    },
+    {
+        id: 112,
+        question: "¿Qué documento debe dejar la empresa de control de plagas tras la visita?",
+        options: [
+            "Solo la factura.", 
+            "Un certificado con la 'Memoria Descriptiva' (qué veneno usaron, dónde y dosis) y hoja de seguridad.", 
+            "Una foto de la cocina.", 
+            "Nada."
+        ],
+        answer: 1,
+        explanation: "Es obligatorio tener el certificado y saber qué productos químicos se aplicaron en el local. (Manual pág. 23)"
+    },
+    {
+        id: 113,
+        question: "Al descongelar en microondas, ¿cuándo debo cocinar el alimento?",
+        options: [
+            "Al día siguiente.", 
+            "Inmediatamente después de descongelar.", 
+            "Puedo volver a guardarlo en la heladera.", 
+            "Cuando quiera."
+        ],
+        answer: 1,
+        explanation: "El microondas descongela desparejo y empieza a cocinar partes. Se debe terminar la cocción al instante para evitar desarrollo bacteriano. (Manual pág. 28)"
+    },
+    {
+        id: 114,
+        question: "¿Se pueden usar cartones o diarios como estantes en la heladera?",
+        options: [
+            "Sí, absorben la humedad.", 
+            "No. Son materiales porosos, sucios y bloquean la circulación del frío.", 
+            "Sí, para no ensuciar.", 
+            "Solo si son del día."
+        ],
+        answer: 1,
+        explanation: "Los materiales porosos y sucios están prohibidos dentro de equipos de frío ya que no se pueden limpiar y bloquean el aire. (Manual pág. 26)"
+    },
+    {
+        id: 115,
+        question: "¿Por qué las ventanas de la cocina deben tener mallas mosquiteras?",
+        options: [
+            "Para que no entre sol.", 
+            "Para evitar el ingreso de insectos y plagas (barrera física).", 
+            "Para que no miren desde afuera.", 
+            "Para decorar."
+        ],
+        answer: 1,
+        explanation: "Es una barrera física obligatoria para impedir que moscas y otros insectos (vectores) toquen los alimentos. (Manual pág. 15/23)"
+    },
+    {
+        id: 116,
+        question: "¿Cuál es la mejor manera de enfriar una olla grande de guiso?",
+        options: [
+            "Dejarla en la hornalla apagada.", 
+            "Pasarlo a recipientes playos (poca profundidad) para que enfríe rápido.", 
+            "Soplarle.", 
+            "Meterla al freezer hirviendo."
+        ],
+        answer: 1,
+        explanation: "Al reducir el volumen y aumentar la superficie, el calor sale más rápido y pasa menos tiempo en la zona de peligro. (Manual pág. 30)"
+    },
+    {
+        id: 117,
+        question: "Las frutas y verduras que se comen crudas deben lavarse y luego...",
+        options: [
+            "Secarse con trapo.", 
+            "Desinfectarse (sanitizarse) con agua y gotas de lavandina apta o vinagre.", 
+            "Solo lavar con agua.", 
+            "Cocinar."
+        ],
+        answer: 1,
+        explanation: "El lavado saca la tierra, la desinfección mata bacterias. OJO: El manual recomienda lavandina apta para alimentos, el vinagre no es desinfectante potente. (Manual pág. 28)"
+    },
+    {
+        id: 118,
+        question: "¿Es seguro comprar conservas 'caseras' sin etiqueta en la ruta?",
+        options: [
+            "Sí, son más naturales.", 
+            "No, riesgo altísimo de Botulismo por falta de control bromatológico.", 
+            "Sí, si la tapa hace ruido.", 
+            "Sí, si son dulces."
+        ],
+        answer: 1,
+        explanation: "Sin RNE/RNPA y control de pH/temperatura, las conservas caseras pueden contener toxina botulínica mortal. (Manual pág. 9 y 34)"
+    },
+    {
+        id: 119,
+        question: "Si abro un sachet de leche y sobra, ¿cómo lo guardo?",
+        options: [
+            "Abierto en la puerta.", 
+            "Le doblo la punta y listo.", 
+            "Lo paso a una jarra limpia con tapa o lo cierro herméticamente.", 
+            "Lo dejo afuera."
+        ],
+        answer: 2,
+        explanation: "Los envases abiertos son puertas para bacterias y olores. Deben cerrarse bien o trasvasarse a recipientes aptos. (Manual pág. 26/27)"
+    },
+    {
+        id: 120,
+        question: "¿Qué indica un envase de yogur o lata hinchado?",
+        options: [
+            "Que trae más producto.", 
+            "Actividad microbiana (gas producido por bacterias). Se debe descartar.", 
+            "Que está batido.", 
+            "Que es de mejor calidad."
+        ],
+        answer: 1,
+        explanation: "La hinchazón en cualquier envase cerrado es señal de descomposición o fermentación indeseada. (Manual pág. 27)"
+    },
+    {
+        id: 121,
+        question: "¿Cuál es la forma correcta de secarse las manos después de lavarlas?",
+        options: [
+            "Con el delantal.", 
+            "Sacudiéndolas al aire.", 
+            "Con toallas de papel descartable.", 
+            "Con el repasador de la cocina."
+        ],
+        answer: 2,
+        explanation: "El papel descartable es higiénico. Los repasadores de tela suelen estar sucios y recontaminan las manos limpias. (Manual pág. 12)"
+    },
+    {
+        id: 122,
+        question: "En el depósito, ¿se aplica la regla 'Primero Entra, Primero Sale' (PEPS)?",
+        options: [
+            "No, saco lo que tengo a mano.", 
+            "Sí, para evitar que los productos viejos se venzan al fondo.", 
+            "Solo con la carne.", 
+            "No hace falta."
+        ],
+        answer: 1,
+        explanation: "La rotación correcta evita pérdidas económicas y riesgos sanitarios por consumir productos vencidos. (Manual pág. 26/27)"
+    },
+    {
+        id: 123,
+        question: "¿Se puede estornudar encima de la comida si me tapo con la mano?",
+        options: [
+            "Sí.", 
+            "No. Se debe estornudar hacia el codo o un pañuelo, desecharlo y lavarse las manos.", 
+            "Sí, si digo salud.", 
+            "Depende la comida."
+        ],
+        answer: 1,
+        explanation: "Estornudar en la mano llena la mano de bacterias (Staphylococcus) que luego van a la comida. (Manual pág. 12/13)"
+    },
+    {
+        id: 124,
+        question: "¿Qué característica debe tener el agua para hacer hielo?",
+        options: [
+            "Debe ser agua mineral.", 
+            "Debe ser potable.", 
+            "Puede ser agua de pozo sin analizar.", 
+            "Cualquier agua sirve si se congela."
+        ],
+        answer: 1,
+        explanation: "El hielo es un alimento. Si el agua no es potable, el hielo será un vehículo de enfermedades (Cólera, Hepatitis, etc). (Manual pág. 33)"
+    },
+    {
+        id: 125,
+        question: "Si la tabla de picar tiene grietas profundas o rajaduras:",
+        options: [
+            "Se debe lijar.", 
+            "Se debe descartar y reemplazar.", 
+            "Se lava con más lavandina.", 
+            "Se usa del lado liso."
+        ],
+        answer: 1,
+        explanation: "En las grietas se acumulan bacterias y restos de comida imposibles de sacar, formando biofilms. Debe cambiarse. (Manual pág. 34)"
+    },
+    {
+        id: 126,
+        question: "Si el agua de la canilla sale turbia o marrón...",
+        options: [
+            "Cocino igual, el calor mata todo.", 
+            "No la uso. Debo usar agua potable/mineral hasta que se solucione.", 
+            "La filtro con un trapo.", 
+            "La uso para hielo."
+        ],
+        answer: 1,
+        explanation: "El agua ingrediente debe ser potable y cristalina. Turbidez indica suciedad en cañerías o tanque. (Manual pág. 15)"
+    },
+    {
+        id: 127,
+        question: "¿Qué hago si encuentro una rata muerta en una trampa?",
+        options: [
+            "La tiro a la basura de la cocina.", 
+            "No la toco. Aviso al servicio de plagas o la retiro con protección (guantes) desinfectando la zona.", 
+            "La dejo ahí.", 
+            "La pateo afuera."
+        ],
+        answer: 1,
+        explanation: "Los cadáveres de plagas son focos infecciosos. Requieren disposición segura para no dispersar patógenos. (Manual pág. 22)"
+    },
+    {
+        id: 128,
+        question: "¿Se puede usar el mismo trapo para limpiar el baño y la cocina?",
+        options: [
+            "Sí, si se lava.", 
+            "No, JAMÁS. Debe haber utensilios exclusivos para cada sector.", 
+            "Sí, con lavandina.", 
+            "Si es nuevo sí."
+        ],
+        answer: 1,
+        explanation: "Es contaminación cruzada grave de zona sucia a zona limpia. Se recomienda codificar por colores. (Manual pág. 33)"
+    },
+    {
+        id: 129,
+        question: "Si uso un termómetro para medir la temperatura de la carne cruda, ¿qué debo hacer antes de medir la cocida?",
+        options: [
+            "Limpiarlo y desinfectarlo (alcohol).", 
+            "Nada.", 
+            "Pasarlo por agua.", 
+            "Secarlo con el delantal."
+        ],
+        answer: 0,
+        explanation: "El pinche del termómetro puede llevar bacterias de una carne cruda a una cocida si no se desinfecta entre usos."
+    },
+    {
+        id: 130,
+        question: "¿Puedo probar si la leche está agria bebiendo un sorbo directo del envase?",
+        options: [
+            "Sí, es la mejor forma.", 
+            "No, contamino todo el envase con mi saliva.", 
+            "Sí, si soy el único que la usa.", 
+            "Mejor olerla."
+        ],
+        answer: 1,
+        explanation: "La boca tiene bacterias. Si tomas del envase, introduces bacterias que echarán a perder el resto del producto."
+    },
+    {
+        id: 131,
+        question: "¿Qué significa que un alimento sea 'inocuo'?",
+        options: [
+            "Que no tiene sabor.", 
+            "Que no causa daño a la salud del consumidor.", 
+            "Que es barato.", 
+            "Que es dietético."
+        ],
+        answer: 1,
+        explanation: "La inocuidad es la garantía de que el alimento es seguro y no nos enfermará. (Manual pág. 6)"
+    },
+    {
+        id: 132,
+        question: "¿Qué es un vector en higiene alimentaria?",
+        options: [
+            "Un vehículo.", 
+            "Un animal (mosca, rata, cucaracha) que transporta enfermedades.", 
+            "Una bacteria.", 
+            "Un tipo de cocción."
+        ],
+        answer: 1,
+        explanation: "Las plagas son vectores porque llevan los gérmenes de un lado a otro (de la basura a la comida). (Manual pág. 22)"
+    },
+    {
+        id: 133,
+        question: "¿El vinagre desinfecta igual que la lavandina?",
+        options: [
+            "Sí, mata todo.", 
+            "No. Acidifica pero no es un desinfectante potente aprobado para superficies críticas.", 
+            "Sí, es igual al cloro.", 
+            "Solo en ensaladas."
+        ],
+        answer: 1,
+        explanation: "Aunque el ácido ayuda, no garantiza la eliminación de patógenos resistentes como lo hace la lavandina o el alcohol al 70%. (Manual pág. 5 y 18)"
+    },
+    {
+        id: 134,
+        question: "Si tengo barba, ¿qué debo usar en la cocina?",
+        options: [
+            "Nada.", 
+            "Un barbijo o cubrebocas que cubra el vello facial.", 
+            "Crema de afeitar.", 
+            "Redecilla en el pelo solamente."
+        ],
+        answer: 1,
+        explanation: "El pelo de la barba también cae y contamina. El manual indica 'No usar barba o bigote' o cubrirla totalmente. (Manual pág. 14)"
+    },
+    {
+        id: 135,
+        question: "¿Está permitido vender 'Milanesas Caseras' congeladas sin etiqueta en un almacén?",
+        options: [
+            "Sí, en el barrio sí.", 
+            "No, todo producto envasado para la venta debe tener rótulo reglamentario (RNE/RNPA).", 
+            "Sí, si se ve la carne.", 
+            "Depende el peso."
+        ],
+        answer: 1,
+        explanation: "Sin rótulo, no hay trazabilidad ni garantía de origen. Es venta clandestina y está prohibida. (Manual pág. 24)"
+    },
+    {
+        id: 136,
+        question: "¿Qué hago con el aceite de freír usado?",
+        options: [
+            "Lo tiro a la rejilla/desagüe.", 
+            "Lo guardo en bidones para recolección diferenciada (RAV).", 
+            "Lo tiro a la tierra.", 
+            "Lo uso para ensalada."
+        ],
+        answer: 1,
+        explanation: "El aceite tapa cañerías y contamina el agua. Se debe reciclar como RAV (Residuo Aceite Vegetal)."
+    },
+    {
+        id: 137,
+        question: "¿Cuándo vence un alimento?",
+        options: [
+            "Cuando huele mal.", 
+            "En la fecha indicada en el envase por el fabricante.", 
+            "Un mes después de la fecha.", 
+            "Nunca vence."
+        ],
+        answer: 1,
+        explanation: "Respetar la fecha de vencimiento es ley. Después de ese día, el fabricante no asegura inocuidad ni calidad."
+    },
+    {
+        id: 138,
+        question: "Si uso guantes descartables, ¿cuándo los cambio?",
+        options: [
+            "Cuando se rompen, se ensucian o cambio de tarea (de crudo a cocido).", 
+            "Al final del día.", 
+            "Nunca, los lavo puestos.", 
+            "Cada 10 minutos."
+        ],
+        answer: 0,
+        explanation: "Los guantes sucios contaminan igual que las manos sucias. No reemplazan el lavado y son de un solo uso. (Manual pág. 13)"
+    },
+    {
+        id: 139,
+        question: "Las uñas del manipulador deben estar...",
+        options: [
+            "Largas y pintadas.", 
+            "Cortas, limpias y sin esmalte.", 
+            "Con uñas postizas.", 
+            "Como quiera."
+        ],
+        answer: 1,
+        explanation: "El esmalte se descascara y cae a la comida. Las uñas largas acumulan suciedad. (Manual pág. 13)"
+    },
+    {
+        id: 140,
+        question: "¿Qué es la contaminación física?",
+        options: [
+            "Bacterias.", 
+            "Lavandina en la comida.", 
+            "Objetos extraños (pelo, aros, vidrio, hueso, plástico).", 
+            "Olor feo."
+        ],
+        answer: 2,
+        explanation: "Es cualquier objeto sólido ajeno al alimento que puede causar asfixia o cortes. (Manual pág. 3)"
+    },
+    {
+        id: 141,
+        question: "¿Qué debo hacer si se inunda la cocina con aguas servidas (cloaca)?",
+        options: [
+            "Seguir cocinando con botas.", 
+            "Cerrar, limpiar, desinfectar todo y tirar alimentos que pudieron contactarse.", 
+            "Poner trapos.", 
+            "Ventilar."
+        ],
+        answer: 1,
+        explanation: "Es una emergencia sanitaria grave. No se puede operar hasta asegurar la higiene total."
+    },
+    {
+        id: 142,
+        question: "Situación: Se rompe un vaso de vidrio sobre la hielera.",
+        options: [
+            "Saco los vidrios grandes y sigo.", 
+            "Tiro TODO el hielo, lavo la hielera y cargo hielo nuevo.", 
+            "Miro bien si quedó vidrio.", 
+            "Lo uso para bebidas licuadas."
+        ],
+        answer: 1,
+        explanation: "El vidrio mezclado con hielo es invisible. El riesgo de que un cliente trague vidrio es inaceptable."
+    },
+    {
+        id: 143,
+        question: "¿Las esponjas de cocina son eternas?",
+        options: [
+            "Sí, duran años.", 
+            "No, acumulan muchas bacterias. Deben desinfectarse o cambiarse seguido.", 
+            "Solo si se rompen.", 
+            "Son autolimpiantes."
+        ],
+        answer: 1,
+        explanation: "La esponja húmeda es un nido de bacterias. Requiere recambio frecuente. (Manual pág. 20)"
+    },
+    {
+        id: 144,
+        question: "¿Cuánto tiempo pueden estar los huevos batidos (crudos) a temperatura ambiente?",
+        options: [
+            "Todo el día.", 
+            "Lo menos posible. Preparar de a poco y mantener en frío.", 
+            "4 horas.", 
+            "Hasta que huelan mal."
+        ],
+        answer: 1,
+        explanation: "El huevo crudo es medio de cultivo ideal para Salmonella. No debe perder la cadena de frío. (Manual pág. 8)"
+    },
+    {
+        id: 145,
+        question: "¿Qué hago con las sobras de pan de la panera del cliente?",
+        options: [
+            "Las tiro a la basura.", 
+            "Las guardo para el siguiente cliente.", 
+            "Hago pan rallado.", 
+            "Me las como."
+        ],
+        answer: 0,
+        explanation: "Todo alimento que fue servido y 'volvió' del salón se considera desecho, ya que pudo ser manipulado por el cliente."
+    },
+    {
+        id: 146,
+        question: "¿Quién es el responsable de la inocuidad de los alimentos?",
+        options: [
+            "Solo el gobierno.", 
+            "Solo el cliente.", 
+            "Todos los eslabones de la cadena (productor, transportista, elaborador, consumidor).", 
+            "El médico."
+        ],
+        answer: 2,
+        explanation: "La seguridad alimentaria es responsabilidad compartida. (Manual pág. 6)"
+    },
+    {
+        id: 147,
+        question: "¿Por qué no se debe soplar para enfriar la comida de un niño (o cliente)?",
+        options: [
+            "Es mala educación.", 
+            "Al soplar expulsamos gotitas de saliva con bacterias (Estafilococo, etc.).", 
+            "Se enfría desparejo.", 
+            "No pasa nada."
+        ],
+        answer: 1,
+        explanation: "Soplar es contaminar biológicamente el alimento con nuestra flora bucal."
+    },
+    {
+        id: 148,
+        question: "¿Es obligatorio tener agua caliente en la cocina?",
+        options: [
+            "No, con fría alcanza.", 
+            "Sí, para el correcto lavado de manos y desengrasado de utensilios.", 
+            "Solo en invierno.", 
+            "Es un lujo."
+        ],
+        answer: 1,
+        explanation: "Sin agua caliente, la grasa no se remueve eficazmente y la higiene es deficiente. (Manual pág. 15)"
+    },
+    {
+        id: 149,
+        question: "Si uso tabla de madera en mi casa, ¿puedo usarla en el restaurante?",
+        options: [
+            "Sí, es mía.", 
+            "No, la normativa prohíbe madera en comercios por ser porosa y juntar hongos.", 
+            "Sí, si la lavo.", 
+            "Depende la madera."
+        ],
+        answer: 1,
+        explanation: "Lo que vale en casa no siempre vale en el comercio. La madera está prohibida (salvo excepciones muy específicas y tratadas). (Manual pág. 15)"
+    },
+    {
+        id: 150,
+        question: "¿El manipulador debe avisar si tiene diarrea o vómitos?",
+        options: [
+            "No, le da vergüenza.", 
+            "Sí, inmediatamente a su supervisor para no manipular comida.", 
+            "Se pone un tapón.", 
+            "Toma remedio y sigue."
+        ],
+        answer: 1,
+        explanation: "La salud pública está por encima de la vergüenza. Es obligación reportar síntomas para evitar brotes epidémicos. (Manual pág. 14)"
+    },
+    // --- BLOQUE 4: RUBROS ESPECÍFICOS, ANEXOS Y DETALLES TÉCNICOS (IDs 151-200) ---
+    {
+        id: 151,
+        question: "En un KIOSCO, ¿está permitido elaborar sándwiches o panchos caseros?",
+        options: [
+            "Sí, si tiene lugar.",
+            "No. Los kioscos tienen prohibida la elaboración propia de alimentos; solo pueden vender envasados de origen.",
+            "Sí, si usa guantes.",
+            "Solo tostados."
+        ],
+        answer: 1,
+        explanation: "Los kioscos solo están habilitados para vender productos que ya vienen envasados de fábrica con su rótulo. (Manual pág. 35)"
+    },
+    {
+        id: 152,
+        question: "En una CARNICERÍA, ¿se puede tener la carne picada preparada en bandejas desde la mañana?",
+        options: [
+            "Sí, para adelantar trabajo.",
+            "No. La carne debe picarse en el momento a la vista del cliente.",
+            "Sí, si está en la heladera.",
+            "Solo si se tapa."
+        ],
+        answer: 1,
+        explanation: "Picar con anticipación aumenta exponencialmente la superficie de contacto para bacterias. Está prohibido tener stock de carne picada. (Manual pág. 33)"
+    },
+    {
+        id: 153,
+        question: "En las GRANJAS, ¿se pueden vender los pollos con las garras (patas) puestas?",
+        options: [
+            "Sí, es tradicional.",
+            "No, está prohibido vender pollos con sus garras.",
+            "Sí, si se lavan.",
+            "Depende del cliente."
+        ],
+        answer: 1,
+        explanation: "Las garras están en contacto directo con heces y tierra, siendo un foco de contaminación alto. (Manual pág. 33)"
+    },
+    {
+        id: 154,
+        question: "En una VERDULERÍA, ¿se pueden vender bandejitas de 'sopa de verdura' cortada en el local?",
+        options: [
+            "Sí, es práctico.",
+            "No. Las verduras procesadas deben venir envasadas y rotuladas de un establecimiento habilitado.",
+            "Sí, si se envuelve en film.",
+            "Solo en invierno."
+        ],
+        answer: 1,
+        explanation: "El procesado (cortado/pelado) requiere condiciones higiénicas de fábrica que una verdulería común no posee. (Manual pág. 34)"
+    },
+    {
+        id: 155,
+        question: "En una PANADERÍA, los sándwiches de miga deben exhibirse...",
+        options: [
+            "Sobre el mostrador a temperatura ambiente.",
+            "En heladeras/vitrinas refrigeradas obligatoriamente.",
+            "En canastos de mimbre.",
+            "Cerca del horno."
+        ],
+        answer: 1,
+        explanation: "Al tener mayonesa, fiambres y alta humedad, los sándwiches de miga requieren cadena de frío constante. (Manual pág. 35)"
+    },
+    {
+        id: 156,
+        question: "¿Qué está prohibido en las HELADERÍAS respecto a los colores?",
+        options: [
+            "Usar colores pastel.",
+            "La adición de colorantes fluorescentes.",
+            "Mezclar colores.",
+            "El color azul."
+        ],
+        answer: 1,
+        explanation: "Los colores fluorescentes denotan la presencia de colorantes artificiales no permitidos por el Código Alimentario. (Manual pág. 36)"
+    },
+    {
+        id: 157,
+        question: "En una FÁBRICA DE PASTAS, ¿cuánto duran las pastas frescas artesanales sin conservantes?",
+        options: [
+            "1 mes.",
+            "Máximo 48 horas (refrigeradas).",
+            "1 semana.",
+            "Lo que diga el vendedor."
+        ],
+        answer: 1,
+        explanation: "Al ser frescas, con huevo y humedad, y sin conservantes industriales, su vida útil es extremadamente corta. (Manual pág. 36)"
+    },
+    {
+        id: 158,
+        question: "¿Se pueden exhibir facturas o bizcochos sobre el mostrador al alcance del cliente sin protección?",
+        options: [
+            "Sí, es autoservicio.",
+            "No. Deben tener protección (vitrina, campana) para evitar la contaminación por saliva/aliento de los clientes.",
+            "Sí, si están lejos del borde.",
+            "Solo las medialunas."
+        ],
+        answer: 1,
+        explanation: "Los productos listos para consumir no pueden estar expuestos al ambiente sin barrera física. (Manual pág. 35)"
+    },
+
+    // --- MÉTODOS DE CONSERVACIÓN (ANEXO I - Págs 43-44) ---
+    {
+        id: 159,
+        question: "¿En qué consiste la PASTEURIZACIÓN?",
+        options: [
+            "Hervir la leche 1 hora.",
+            "Calentar a temperaturas altas por corto tiempo y enfriar rápido para reducir patógenos.",
+            "Congelar rápido.",
+            "Ponerle mucho azúcar."
+        ],
+        answer: 1,
+        explanation: "Es el método térmico estándar (ej. leche) que elimina patógenos peligrosos sin cocinar completamente el alimento."
+    },
+    {
+        id: 160,
+        question: "¿Qué es la LIOFILIZACIÓN?",
+        options: [
+            "Un tipo de fritura.",
+            "Deshidratación por frío (congelado y vacío).",
+            "Cocción a presión.",
+            "Un conservante químico."
+        ],
+        answer: 1,
+        explanation: "Es un método de conservación avanzado donde se quita el agua al alimento congelado, manteniendo su estructura."
+    },
+    {
+        id: 161,
+        question: "¿Qué efecto tiene el AZÚCAR en altas concentraciones (Almíbar)?",
+        options: [
+            "Solo endulza.",
+            "Actúa como conservante al atrapar el agua disponible (baja la Aw).",
+            "Mata bacterias por calor.",
+            "Ninguno."
+        ],
+        answer: 1,
+        explanation: "Al igual que la sal, el azúcar en gran cantidad deja a las bacterias sin agua disponible para vivir."
+    },
+    {
+        id: 162,
+        question: "¿Existe la esterilización 'casera' segura para conservas?",
+        options: [
+            "Sí, hirviendo frascos en olla común.",
+            "No. La esterilización real requiere autoclaves industriales a 130°C.",
+            "Sí, con alcohol.",
+            "Sí, al sol."
+        ],
+        answer: 1,
+        explanation: "En casa solo se puede pasteurizar (agua hirviendo a 100°C), lo cual NO mata las esporas del botulismo en conservas neutras."
+    },
+
+    // --- INFRAESTRUCTURA Y LIMPIEZA (DETALLES TÉCNICOS) ---
+    {
+        id: 163,
+        question: "¿Con qué frecuencia se deben limpiar las CAMPANAS extractoras?",
+        options: [
+            "Una vez al año.",
+            "Dos veces por semana (mínimo) para evitar acumulación de grasa y riesgo de incendio.",
+            "Cuando gotean grasa.",
+            "Nunca."
+        ],
+        answer: 1,
+        explanation: "La grasa acumulada en campanas puede gotear sobre la comida (contaminación) o prenderse fuego. (Manual pág. 17)"
+    },
+    {
+        id: 164,
+        question: "¿Qué es un BIOFILM?",
+        options: [
+            "Una película de plástico.",
+            "Una capa resistente de microorganismos pegada a superficies mal lavadas.",
+            "Un video educativo.",
+            "Un detergente."
+        ],
+        answer: 1,
+        explanation: "Los biofilms son colonias de bacterias protegidas por una baba que resiste la limpieza común. Requieren fricción fuerte. (Manual pág. 18)"
+    },
+    {
+        id: 165,
+        question: "Los ángulos entre paredes y pisos (zócalos) deben ser...",
+        options: [
+            "Rectos (90 grados).",
+            "Redondeados (sanitarios) para facilitar la limpieza.",
+            "De madera.",
+            "No importa."
+        ],
+        answer: 1,
+        explanation: "El zócalo sanitario curvo evita que se junte mugre en las esquinas difíciles de limpiar. (Manual pág. 12)"
+    },
+    {
+        id: 166,
+        question: "¿Qué indica la presencia de manchas oscuras en techos y paredes?",
+        options: [
+            "Es decoración.",
+            "Presencia de hongos/moho por humedad y mala ventilación.",
+            "Que cocinan mucho.",
+            "Sombra."
+        ],
+        answer: 1,
+        explanation: "Los hongos en infraestructura pueden liberar esporas al aire y contaminar los alimentos. (Manual pág. 14)"
+    },
+
+    // --- TRANSPORTE Y RECEPCIÓN ---
+    {
+        id: 167,
+        question: "Si llega un camión habilitado pero con 'olor a combustible' en la caja:",
+        options: [
+            "Ventilo la mercadería y la uso.",
+            "Rechazo la mercadería por contaminación química.",
+            "Lavo los envases.",
+            "Solo rechazo lo que no está envasado."
+        ],
+        answer: 1,
+        explanation: "Los alimentos grasos absorben olores químicos rápidamente. Es un riesgo de contaminación química inaceptable. (Manual pág. 38)"
+    },
+    {
+        id: 168,
+        question: "¿Dónde debe exhibirse la habilitación en un vehículo de transporte (UTA)?",
+        options: [
+            "En la guantera.",
+            "En el exterior del vehículo, de forma legible.",
+            "No hace falta si tiene el logo.",
+            "En la casa del dueño."
+        ],
+        answer: 1,
+        explanation: "El número de habilitación debe ser visible para inspección en vía pública. (Manual pág. 38)"
+    },
+    {
+        id: 169,
+        question: "Al recibir latas de conserva, ¿cuáles debo rechazar (además de las hinchadas)?",
+        options: [
+            "Las que tienen etiquetas viejas.",
+            "Las abolladas u oxidadas.",
+            "Las que pesan mucho.",
+            "Las importadas."
+        ],
+        answer: 1,
+        explanation: "Una abolladura, especialmente en los bordes, puede romper el barniz interior y permitir que el metal contamine la comida. (Manual pág. 25)"
+    },
+
+    // --- POES Y QUÍMICOS ---
+    {
+        id: 170,
+        question: "¿Qué se debe hacer primero: Limpiar o Desinfectar?",
+        options: [
+            "Es lo mismo.",
+            "Primero Limpiar (sacar lo visible) y luego Desinfectar (matar bacterias).",
+            "Primero Desinfectar y luego Limpiar.",
+            "Mezclar todo junto."
+        ],
+        answer: 1,
+        explanation: "La suciedad orgánica inactiva los desinfectantes. Si no limpias primero, no desinfectas nada. (Manual pág. 15)"
+    },
+    {
+        id: 171,
+        question: "¿Qué temperatura debe tener el agua para desengrasar efectivamente?",
+        options: [
+            "Fría.",
+            "Tibia (20°C).",
+            "Caliente (entre 45°C y 55°C) para que actúe el detergente.",
+            "Hirviendo (100°C)."
+        ],
+        answer: 2,
+        explanation: "El agua fría solidifica la grasa. Se necesita calor para emulsionarla junto con el detergente. (Manual pág. 18)"
+    },
+    {
+        id: 172,
+        question: "El tiempo de contacto del desinfectante con la superficie es...",
+        options: [
+            "Irrelevante.",
+            "Muy importante. Hay que dejarlo actuar el tiempo que diga el fabricante.",
+            "Solo 1 segundo.",
+            "Toda la noche."
+        ],
+        answer: 1,
+        explanation: "Echar lavandina y secar inmediatamente NO sirve. El químico necesita minutos para matar al microorganismo."
+    },
+
+    // --- PLAGAS E INFRAESTRUCTURA ---
+    {
+        id: 173,
+        question: "¿Por qué se deben tapar los desagües y rejillas en la cocina?",
+        options: [
+            "Para que no salga olor.",
+            "Para evitar el ingreso de plagas desde las cañerías.",
+            "Para que no se caigan cosas.",
+            "Por estética."
+        ],
+        answer: 1,
+        explanation: "Las cucarachas y roedores usan los desagües como autopistas para entrar a la cocina. (Manual pág. 13)"
+    },
+    {
+        id: 174,
+        question: "¿Qué tipo de luz atrae MENOS a los insectos en las entradas?",
+        options: [
+            "Luz blanca intensa.",
+            "Luz amarilla.",
+            "Luz ultravioleta.",
+            "Luz roja."
+        ],
+        answer: 1,
+        explanation: "Se recomienda luz amarilla en entradas de servicio porque atrae menos insectos nocturnos que la blanca. (Manual pág. 21)"
+    },
+    {
+        id: 175,
+        question: "¿Qué son los 'signos' de presencia de plagas?",
+        options: [
+            "Ver al animal vivo.",
+            "Excrementos, manchas de grasa en zócalos, envases roídos.",
+            "Ruidos de noche.",
+            "Todas las anteriores."
+        ],
+        answer: 3,
+        explanation: "No hace falta ver a la rata para saber que está. Los signos confirman la infestación activa. (Manual pág. 20)"
+    },
+
+    // --- ENFERMEDADES Y BACTERIAS (NUEVAS) ---
+    {
+        id: 176,
+        question: "¿Qué bacteria (vibrio) se asocia al agua no potable y pescados contaminados?",
+        options: [
+            "Vibrio cholerae (Cólera).",
+            "Salmonella.",
+            "Triquinosis.",
+            "Botulismo."
+        ],
+        answer: 0,
+        explanation: "El Cólera se transmite principalmente por agua contaminada con materia fecal y alimentos de mar crudos. (Manual pág. 7/9)"
+    },
+    {
+        id: 177,
+        question: "La ictericia (piel y ojos amarillos) es síntoma característico de...",
+        options: [
+            "Botulismo.",
+            "Hepatitis A.",
+            "Salmonella.",
+            "Celiaquía."
+        ],
+        answer: 1,
+        explanation: "La Hepatitis A es un virus que ataca el hígado, provocando este síntoma visible. (Manual pág. 10)"
+    },
+    {
+        id: 178,
+        question: "¿Qué son los 'Grupos de Riesgo'?",
+        options: [
+            "Los cocineros.",
+            "Niños, Embarazadas, Ancianos e Inmunodeprimidos.",
+            "Los clientes vip.",
+            "Los proveedores."
+        ],
+        answer: 1,
+        explanation: "Son las personas cuyo sistema inmune es más débil, por lo que una intoxicación puede ser mortal para ellos. (Manual pág. 5)"
+    },
+
+    // --- SITUACIONES DE SERVICIO Y OPERACIÓN ---
+    {
+        id: 179,
+        question: "Si se cae una lata de conservas cerrada al piso y se abolla un poco el borde...",
+        options: [
+            "La uso igual.",
+            "La separo para devolución o descarte (riesgo de micro-fisuras).",
+            "La enderezo.",
+            "La hiervo."
+        ],
+        answer: 1,
+        explanation: "El golpe puede haber roto el sello hermético invisiblemente. Ante la duda, no se usa."
+    },
+    {
+        id: 180,
+        question: "¿Se permite apoyar las bolsas de basura sobre la mesada de trabajo antes de sacarlas?",
+        options: [
+            "Sí, un ratito.",
+            "No. Está prohibido apoyar basura en superficies donde se manipulan alimentos.",
+            "Sí, si la bolsa es nueva.",
+            "Depende del horario."
+        ],
+        answer: 1,
+        explanation: "La bolsa de basura viene del piso y contiene desechos. Apoyarla en la mesada es contaminación cruzada directa. (Manual pág. 13)"
+    },
+    {
+        id: 181,
+        question: "Respecto a los uniformes, ¿por qué se recomienda que NO tengan bolsillos superiores?",
+        options: [
+            "Por moda.",
+            "Para evitar que caigan objetos (lapiceras, monedas) a la comida al agacharse.",
+            "Para ahorrar tela.",
+            "Para que no roben."
+        ],
+        answer: 1,
+        explanation: "Es una medida de seguridad física para evitar cuerpos extraños en la preparación. (Manual pág. 11)"
+    },
+    {
+        id: 182,
+        question: "¿Qué debe hacer si ve personas ajenas (visitantes, técnicos) entrar a la cocina?",
+        options: [
+            "Nada.",
+            "Exigirles vestimenta adecuada (cofia, bata) y control de higiene.",
+            "Echarlos.",
+            "Pedirles que no toquen nada."
+        ],
+        answer: 1,
+        explanation: "Cualquier persona que ingrese al área de elaboración es un potencial contaminante y debe cumplir las normas BPM."
+    },
+    {
+        id: 183,
+        question: "¿Las bebidas se pueden enfriar en la misma hielera que el hielo para tragos?",
+        options: [
+            "Sí, ahorra espacio.",
+            "No. Las botellas están sucias por fuera y contaminan el hielo que se va a consumir.",
+            "Sí, si las lavo.",
+            "Solo latas."
+        ],
+        answer: 1,
+        explanation: "El hielo para consumo (ingrediente) debe estar separado del hielo usado para refrigerar botellas. (Manual pág. 33)"
+    },
+    {
+        id: 184,
+        question: "Si descongelo carne en la heladera, ¿dónde la ubico exactamente?",
+        options: [
+            "Arriba de todo.",
+            "Abajo de todo y en un recipiente profundo que contenga los jugos.",
+            "En la puerta.",
+            "Sobre las verduras."
+        ],
+        answer: 1,
+        explanation: "La ubicación inferior evita que, si el recipiente rebalsa, la sangre cruda caiga sobre alimentos listos para consumir. (Manual pág. 26)"
+    },
+    {
+        id: 185,
+        question: "¿Qué temperatura se recomienda para el agua de lavado de manos?",
+        options: [
+            "Hirviendo.",
+            "Tibia, para ayudar al jabón y cuidar la piel del manipulador.",
+            "Helada.",
+            "No importa."
+        ],
+        answer: 1,
+        explanation: "Si el agua está helada o hirviendo, el manipulador se lava rápido y mal. La temperatura confortable asegura un buen lavado. (Manual pág. 10)"
+    },
+    {
+        id: 186,
+        question: "¿Qué es la 'Contaminación Química'?",
+        options: [
+            "Bacterias.",
+            "Restos de pesticidas, detergente mal enjuagado o metales pesados en la comida.",
+            "Un pelo.",
+            "Comida quemada."
+        ],
+        answer: 1,
+        explanation: "Es la presencia de sustancias químicas tóxicas, a diferencia de la biológica (bacterias) o física (objetos). (Manual pág. 3)"
+    },
+    {
+        id: 187,
+        question: "¿Por qué no se deben usar cajones de madera de la verdulería dentro de la cocina?",
+        options: [
+            "Son feos.",
+            "Son porosos, no se pueden lavar y traen plagas del mercado.",
+            "Pesan mucho.",
+            "Astillan las manos."
+        ],
+        answer: 1,
+        explanation: "La madera cruda es un vehículo de contaminación. Se debe trasvasar a cajones plásticos limpios al recibir. (Manual pág. 23)"
+    },
+    {
+        id: 188,
+        question: "¿Qué es el R.N.P.A.?",
+        options: [
+            "Registro Nacional de Productores.",
+            "Registro Nacional de Producto Alimenticio (el 'DNI' del producto).",
+            "Reglamento de Panaderías.",
+            "Registro de Plagas."
+        ],
+        answer: 1,
+        explanation: "Es el número único que identifica a un producto alimenticio aprobado en Argentina. (Manual pág. 23)"
+    },
+    {
+        id: 189,
+        question: "¿Se puede usar la pileta de lavar platos (bacha) para lavarse las manos?",
+        options: [
+            "Sí, es agua igual.",
+            "No. Debe haber un lavamanos exclusivo. Si no, sanear la pileta antes y después.",
+            "Solo si no hay platos.",
+            "Es lo ideal."
+        ],
+        answer: 1,
+        explanation: "Lavarse las manos sucias sobre los platos limpios o vegetales es contaminación cruzada. (Manual pág. 14)"
+    },
+    {
+        id: 190,
+        question: "¿Qué hacer si el termómetro de recepción marca que los congelados llegaron a -5°C?",
+        options: [
+            "Aceptarlos y congelar rápido.",
+            "Rechazarlos. Deben llegar a -18°C (con tolerancia mínima según producto, pero -5°C es descongelado).",
+            "Cocinar todo ya.",
+            "Ponerlos en agua."
+        ],
+        answer: 1,
+        explanation: "A -5°C el producto está prácticamente descongelado. Se rompió la cadena de frío y se rechaza. (Manual pág. 22)"
+    },
+    {
+        id: 191,
+        question: "¿Las mascotas pueden viajar en la cabina del camión de reparto?",
+        options: [
+            "Sí, son compañía.",
+            "No. El transporte de alimentos debe ser higiénico y libre de animales.",
+            "Sí, si van atadas.",
+            "Solo gatos."
+        ],
+        answer: 1,
+        explanation: "El vehículo habilitado (UTA) prohíbe la presencia de animales por riesgo de contaminación. (Manual pág. 38)"
+    },
+    {
+        id: 192,
+        question: "¿Qué hacemos con los productos 'Vencidos' en el depósito?",
+        options: [
+            "Los usamos rápido.",
+            "Se separan, se identifican como 'NO APTOS' y se eliminan antes de 48hs.",
+            "Se borra la fecha.",
+            "Se regalan."
+        ],
+        answer: 1,
+        explanation: "No pueden convivir con los aptos por riesgo de uso accidental. Deben segregarse inmediatamente. (Manual pág. 25)"
+    },
+    {
+        id: 193,
+        question: "Para sanitizar verduras, ¿la cantidad de lavandina es siempre la misma?",
+        options: [
+            "Sí, una tapita.",
+            "No. Depende de la concentración de la marca (leer rótulo). Generalmente son gotas por litro.",
+            "Un chorro.",
+            "No se usa lavandina."
+        ],
+        answer: 1,
+        explanation: "Usar 'a ojo' es peligroso (intoxicación química) o inútil (no desinfecta). Se debe seguir la instrucción del fabricante. (Manual pág. 16)"
+    },
+    {
+        id: 194,
+        question: "¿Qué significa la sigla E.T.A.?",
+        options: [
+            "Estación de Transporte.",
+            "Enfermedad Transmitida por Alimentos.",
+            "Equipo Técnico Alimentario.",
+            "Envase Tratado Asépticamente."
+        ],
+        answer: 1,
+        explanation: "Concepto básico: Son las enfermedades causadas por ingerir alimentos o agua contaminados. (Manual pág. 5)"
+    },
+    {
+        id: 195,
+        question: "Regla de oro del freezer: ¿Se puede volver a congelar algo descongelado?",
+        options: [
+            "Sí, siempre.",
+            "No, salvo que se haya cocinado en el medio (Crudo -> Descongelado -> Cocido -> Recongelar).",
+            "Sí, si huele bien.",
+            "Solo verduras."
+        ],
+        answer: 1,
+        explanation: "Al descongelar, las bacterias se multiplican. Si re-congelas crudo, guardas una 'bomba' bacteriana. Al cocinar, 'reseteas' la carga bacteriana. (Manual pág. 27)"
+    },
+    {
+        id: 196,
+        question: "Si tengo una herida en la mano y no hay guantes en el local...",
+        options: [
+            "Trabajo igual con cuidado.",
+            "No debo manipular alimentos. Debo ser reasignado a otra tarea o no trabajar.",
+            "Me pongo una bolsa.",
+            "Uso mucha lavandina."
+        ],
+        answer: 1,
+        explanation: "Una herida sin la protección doble adecuada (impermeable + guante) es una fuente directa de Staphylococcus aureus. (Manual pág. 12)"
+    },
+    {
+        id: 197,
+        question: "La carne envasada al vacío tiene color oscuro/púrpura. ¿Es normal?",
+        options: [
+            "No, está podrida.",
+            "Sí, es normal por falta de oxígeno. Al abrir el envase recupera el rojo brillante.",
+            "Es carne vieja.",
+            "Está quemada."
+        ],
+        answer: 1,
+        explanation: "Es una reacción química de la mioglobina ante la falta de aire. Si al abrir recupera color y huele bien, es segura."
+    },
+    {
+        id: 198,
+        question: "¿Qué es el 'Saneamiento' según el manual?",
+        options: [
+            "Tirar agua.",
+            "Los procedimientos de Limpieza + Desinfección + Control de Plagas.",
+            "Ventilar el local.",
+            "Pintar paredes."
+        ],
+        answer: 1,
+        explanation: "Saneamiento es el concepto integral de higiene (sacar suciedad y matar gérmenes). (Manual pág. 15)"
+    },
+    {
+        id: 199,
+        question: "¿Qué es un 'Portador Sano'?",
+        options: [
+            "Alguien que come sano.",
+            "Una persona que tiene gérmenes patógenos, no tiene síntomas, pero contagia.",
+            "Un alimento orgánico.",
+            "Un inspector."
+        ],
+        answer: 1,
+        explanation: "Es el manipulador más peligroso, porque al sentirse bien, trabaja y contamina sin saberlo (ej. Salmonella, Hepatitis). (Manual pág. 9)"
+    },
+    {
+        id: 200,
+        question: "Pregunta final: ¿Cuál es el objetivo principal de las Buenas Prácticas de Manufactura (BPM)?",
+        options: [
+            "Que la comida sea rica.",
+            "Obtener alimentos inocuos, saludables y seguros para el consumidor.",
+            "Gastar menos dinero.",
+            "Cumplir horario."
+        ],
+        answer: 1,
+        explanation: "Las BPM son los procedimientos necesarios para garantizar que el alimento no enferme a nadie. (Manual pág. 11)"
     }
 ];

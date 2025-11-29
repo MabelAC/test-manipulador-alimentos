@@ -21,28 +21,97 @@ nextBtn.addEventListener('click', () => navigateQuestion(1));
 finishBtn.addEventListener('click', finishExam);
 
 // Función: Iniciar Examen
-function startExam() {
-    // 1. Seleccionar 20 preguntas aleatorias
-    // Usamos spread operator [...] para no modificar el array original
-    currentQuestions = [...questionBank]
-        .sort(() => Math.random() - 0.5) // Mezclar
-        .slice(0, 20); // Tomar las primeras 20 (o menos si hay menos en la base)
 
-    // 2. Resetear variables
+function startExam() {
+    // 1. Categorizar preguntas
+    const categorized = categorizeQuestions(questionBank);
+
+    // 2. Seleccionar 4 de cada categoría
+    const selectedQuestions = [
+        ...getRandomItems(categorized.temperaturas, 4),
+        ...getRandomItems(categorized.etas, 4),
+        ...getRandomItems(categorized.higiene, 4),
+        ...getRandomItems(categorized.contaminacion, 4),
+        ...getRandomItems(categorized.variadas, 4)
+    ];
+
+    // 3. Mezclar las 20 preguntas finales para que no salgan en orden por tema
+    currentQuestions = shuffleArray(selectedQuestions);
+
+    // 4. Resetear variables
     userAnswers = {};
     currentQuestionIndex = 0;
 
-    // 3. Cambiar Pantalla
+    // 5. Cambiar Pantalla
     startScreen.classList.remove('active');
     startScreen.classList.add('hidden');
     quizScreen.classList.remove('hidden');
     quizScreen.classList.add('active');
 
-    // Ocultar el encabezado (Hero Section) para limpiar la vista
+    // Ocultar el encabezado (Hero Section)
     document.querySelector('.hero-section').classList.add('hidden');
 
-    // 4. Mostrar primera pregunta
+    // 6. Mostrar primera pregunta
     showQuestion();
+}
+
+// Función: Categorizar preguntas automáticamente
+function categorizeQuestions(allQuestions) {
+    const categories = {
+        temperaturas: [],
+        etas: [],
+        higiene: [],
+        contaminacion: [],
+        variadas: []
+    };
+
+    allQuestions.forEach(q => {
+        const text = (q.question + " " + q.explanation).toLowerCase();
+
+        // Palabras clave por tema (Prioridad descendente)
+        if (matchesKeywords(text, ["temperatura", "°c", "grados", "congel", "frio", "frío", "calor", "cocción", "cocinar", "zona de peligro", "termómetro", "enfriar", "calentar", "pasteuriz", "liofiliz", "cadena de frío"])) {
+            categories.temperaturas.push(q);
+        } else if (matchesKeywords(text, ["bacteria", "virus", "enfermedad", "salmonella", "coli", "botulismo", "triquinosis", "listeria", "staphylococcus", "eta", "síndrome", "patógeno", "microorganismo", "parásito", "portador", "vibrio", "hepatitis", "toxina"])) {
+            categories.etas.push(q);
+        } else if (matchesKeywords(text, ["cruzada", "crudo", "tabla", "separar", "almacenamiento", "guardar", "heladera", "estante", "arriba", "abajo", "tapa", "hermético", "orden", "rotación", "peps", "contaminación directa", "contaminación indirecta"])) {
+            categories.contaminacion.push(q);
+        } else if (matchesKeywords(text, ["lavado", "manos", "higiene", "limpieza", "jabón", "desinfect", "uniforme", "cabello", "barba", "uñas", "joyas", "reloj", "fumar", "comer", "herida", "guantes", "poes", "basura", "residuos", "plagas", "ratas", "cucarachas", "moscas", "insectos", "detergente", "lavandina", "alcohol", "trapo", "rejilla", "esponja", "barrer", "estornud", "saliva", "baño", "sanitiz", "saneamiento", "agua potable", "tanque"])) {
+            categories.higiene.push(q);
+        } else {
+            categories.variadas.push(q);
+        }
+    });
+
+    // Fallback: Si alguna categoría no tiene suficientes preguntas (raro con 200), rellenar con variadas
+    // (Lógica simplificada: asumimos que hay suficientes dado el volumen)
+    console.log("Distribución:", {
+        Temp: categories.temperaturas.length,
+        ETAs: categories.etas.length,
+        Higiene: categories.higiene.length,
+        Cruzada: categories.contaminacion.length,
+        Variadas: categories.variadas.length
+    });
+
+    return categories;
+}
+
+function matchesKeywords(text, keywords) {
+    return keywords.some(keyword => text.includes(keyword));
+}
+
+// Función: Obtener N elementos aleatorios de un array
+function getRandomItems(array, count) {
+    const shuffled = shuffleArray([...array]);
+    return shuffled.slice(0, count);
+}
+
+// Función: Mezclar Array (Fisher-Yates Shuffle)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 // Función: Mostrar Pregunta Actual
