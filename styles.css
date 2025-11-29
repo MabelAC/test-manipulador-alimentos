@@ -1,13 +1,13 @@
 :root {
-    --primary: #00a8bf;
-    --primary-dark: #008ba3;
+    --primary: #0891b2;
+    --primary-dark: #0e7490;
     --secondary: #111827;
     --accent: #e67e22;
     --success: #27ae60;
-    --error: #c0392b;
-    --bg-body: #e2e6ea;
+    --error: #dc2626;
+    --bg-body: #f1f5f9;
     --surface: #ffffff;
-    --text-muted: #4b5563;
+    --text-muted: #475569;
 }
 
 body {
@@ -55,10 +55,10 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-    background: #e0f7fa;
+    background: #cffafe;
     padding: 3rem 0 2rem 0;
     text-align: center;
-    border-bottom: 1px solid #b2ebf2;
+    border-bottom: 1px solid #67e8f9;
 }
 
 .hero-section h1 {
@@ -237,7 +237,7 @@ body {
 
 .option-btn:hover {
     border-color: var(--primary);
-    background: #e0f7fa;
+    background: #cffafe;
 }
 
 .option-btn.selected {
