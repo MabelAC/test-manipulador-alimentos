@@ -174,3 +174,10 @@ function finishExam() {
         resultMessage.style.color = "var(--error)";
     }
 }
+
+// Función: Toggle FAQ Acordeón
+function toggleFAQ(button) {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle('active');
+}
+

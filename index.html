@@ -134,40 +134,53 @@
     </main>
 
     <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
-    <section class="container" style="margin: 3rem auto; max-width: 800px;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Preguntas Frecuentes</h2>
+    <section class="container faq-section">
+        <h2 class="faq-title">Preguntas Frecuentes</h2>
 
-        <div
-            style="background: var(--card-bg); padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">¿Este simulador emite el
-                    certificado oficial?</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">No, este es un simulador de práctica gratuito
-                    para ayudarte a estudiar. Para obtener el certificado oficial debes rendir el examen en la Agencia
-                    Gubernamental de Control (AGC) de la Ciudad de Buenos Aires.</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span class="faq-question-text">¿Este simulador emite el certificado oficial?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No, este es un simulador de práctica gratuito para ayudarte a estudiar. Para obtener el
+                        certificado oficial debes rendir el examen en la Agencia Gubernamental de Control (AGC) de la
+                        Ciudad de Buenos Aires.</p>
+                </div>
             </div>
 
-            <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">¿Las preguntas son del
-                    manual oficial?</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">Sí, todas las preguntas están basadas en el
-                    Manual Oficial de Manipulación de Alimentos de la AGC – CABA. El contenido está actualizado para
-                    2025.</p>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span class="faq-question-text">¿Las preguntas son del manual oficial?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí, todas las preguntas están basadas en el Manual Oficial de Manipulación de Alimentos de la AGC
+                        – CABA. El contenido está actualizado para 2025.</p>
+                </div>
             </div>
 
-            <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">¿Cuántas veces puedo hacer
-                    el test?</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">Puedes hacer el test todas las veces que quieras.
-                    Cada vez se generan 20 preguntas aleatorias de nuestra base de datos para que practiques diferentes
-                    combinaciones.</p>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span class="faq-question-text">¿Cuántas veces puedo hacer el test?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Puedes hacer el test todas las veces que quieras. Cada vez se generan 20 preguntas aleatorias de
+                        nuestra base de datos para que practiques diferentes combinaciones.</p>
+                </div>
             </div>
 
-            <div>
-                <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">¿Necesito registrarme o
-                    pagar?</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">No, el simulador es completamente gratuito y no
-                    requiere registro. No guardamos ningún dato personal.</p>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span class="faq-question-text">¿Necesito registrarme o pagar?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No, el simulador es completamente gratuito y no requiere registro. No guardamos ningún dato
+                        personal.</p>
+                </div>
             </div>
         </div>
     </section>
