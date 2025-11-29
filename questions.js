@@ -2,7 +2,7 @@ const questionBank = [
     // --- CONCEPTOS BÁSICOS (Pág 3) ---
     {
         id: 1,
-        question: "¿Qué es un 'Alimento Adulterado' según el código?",
+        question: "¿Qué es un Alimento Adulterado según el código?",
         options: [
             "Aquel que contiene sustancias no autorizadas o se le han quitado elementos útiles para disimular defectos.",
             "Aquel que tiene bacterias vivas.",
@@ -14,7 +14,7 @@ const questionBank = [
     },
     {
         id: 2,
-        question: "¿Qué es un 'Alimento Contaminado'?",
+        question: "¿Qué es un Alimento Contaminado?",
         options: [
             "El que tiene apariencia de un producto legítimo pero no lo es.",
             "El que contiene agentes vivos (virus, bacterias), químicos o físicos extraños a su composición normal.",
@@ -80,7 +80,7 @@ const questionBank = [
     // --- TEMPERATURAS Y CONSERVACIÓN (Pág 6, 28, 43) ---
     {
         id: 8,
-        question: "¿Cuál es la 'Zona de Peligro' de temperatura?",
+        question: "¿Cuál es la Zona de Peligro de temperatura?",
         options: ["De 0°C a 10°C", "De 5°C a 65°C", "Más de 100°C", "Menos de 0°C"],
         answer: 1,
         explanation: "Entre 5°C y 65°C es donde las bacterias se multiplican a gran velocidad."
@@ -109,7 +109,7 @@ const questionBank = [
         question: "¿Qué pasa si congelo un alimento a -18°C?",
         options: [
             "Las bacterias explotan y mueren.",
-            "Se detiene el crecimiento bacteriano, pero las bacterias quedan 'dormidas' (latentes).",
+            "Se detiene el crecimiento bacteriano, pero las bacterias quedan dormidas (latentes).",
             "El alimento pierde todos sus nutrientes.",
             "Se eliminan las toxinas."
         ],
@@ -648,7 +648,7 @@ const questionBank = [
     {
         id: 72,
         question: "¿El microondas cocina de manera uniforme?",
-        options: ["Sí, es perfecto.", "No, suele dejar 'puntos fríos' donde sobreviven bacterias.", "Sí, si es potente.", "Esteriliza la comida."],
+        options: ["Sí, es perfecto.", "No, suele dejar puntos fríos donde sobreviven bacterias.", "Sí, si es potente.", "Esteriliza la comida."],
         answer: 1,
         explanation: "Al usar microondas, se debe revolver y asegurar que TODA la comida alcance la temperatura segura."
     },
@@ -673,7 +673,7 @@ const questionBank = [
         question: "¿Puede el polvo de harina en suspensión contaminar un plato para celíacos?",
         options: ["No, porque flota.", "Sí, es contaminación cruzada ambiental y es muy peligrosa.", "Solo si cae mucha cantidad.", "El celíaco puede comer un poco."],
         answer: 1,
-        explanation: "La harina es volátil. En cocinas mixtas es muy difícil garantizar 'Libre de Gluten' por el aire."
+        explanation: "La harina es volátil. En cocinas mixtas es muy difícil garantizar Libre de Gluten por el aire."
     },
     {
         id: 76,
@@ -714,7 +714,7 @@ const questionBank = [
     },
     {
         id: 81,
-        question: "¿Qué es un alimento 'Genuino'?",
+        question: "¿Qué es un alimento Genuino?",
         options: ["El que responde a las especificaciones legales, sin adulteración ni falsificación.", "El que es muy rico.", "El que es importado.", "El que se compra en la calle."],
         answer: 0,
         explanation: "Es el alimento legal, que cumple con lo que dice su rótulo y la normativa."
@@ -791,7 +791,7 @@ const questionBank = [
     },
     {
         id: 92,
-        question: "¿Qué es la 'Cadena de Frío'?",
+        question: "¿Qué es la Cadena de Frío?",
         options: ["Poner hielo en las bebidas.", "Mantener la temperatura controlada del alimento desde la producción hasta el consumo.", "Tener muchas heladeras.", "El frío del invierno."],
         answer: 1,
         explanation: "Es la continuidad ininterrumpida de las condiciones de temperatura."
@@ -989,7 +989,7 @@ const questionBank = [
         question: "¿Qué documento debe dejar la empresa de control de plagas tras la visita?",
         options: [
             "Solo la factura.", 
-            "Un certificado con la 'Memoria Descriptiva' (qué veneno usaron, dónde y dosis) y hoja de seguridad.", 
+            "Un certificado con la Memoria Descriptiva (qué veneno usaron, dónde y dosis) y hoja de seguridad.", 
             "Una foto de la cocina.", 
             "Nada."
         ],
@@ -1058,7 +1058,7 @@ const questionBank = [
     },
     {
         id: 118,
-        question: "¿Es seguro comprar conservas 'caseras' sin etiqueta en la ruta?",
+        question: "¿Es seguro comprar conservas caseras sin etiqueta en la ruta?",
         options: [
             "Sí, son más naturales.", 
             "No, riesgo altísimo de Botulismo por falta de control bromatológico.", 
@@ -1106,7 +1106,7 @@ const questionBank = [
     },
     {
         id: 122,
-        question: "En el depósito, ¿se aplica la regla 'Primero Entra, Primero Sale' (PEPS)?",
+        question: "En el depósito, ¿se aplica la regla Primero Entra, Primero Sale (PEPS)?",
         options: [
             "No, saco lo que tengo a mano.", 
             "Sí, para evitar que los productos viejos se venzan al fondo.", 
@@ -1214,7 +1214,7 @@ const questionBank = [
     },
     {
         id: 131,
-        question: "¿Qué significa que un alimento sea 'inocuo'?",
+        question: "¿Qué significa que un alimento sea inocuo?",
         options: [
             "Que no tiene sabor.", 
             "Que no causa daño a la salud del consumidor.", 
@@ -1258,11 +1258,11 @@ const questionBank = [
             "Redecilla en el pelo solamente."
         ],
         answer: 1,
-        explanation: "El pelo de la barba también cae y contamina. El manual indica 'No usar barba o bigote' o cubrirla totalmente. (Manual pág. 14)"
+        explanation: "El pelo de la barba también cae y contamina. El manual indica No usar barba o bigote o cubrirla totalmente. (Manual pág. 14)"
     },
     {
         id: 135,
-        question: "¿Está permitido vender 'Milanesas Caseras' congeladas sin etiqueta en un almacén?",
+        question: "¿Está permitido vender Milanesas Caseras congeladas sin etiqueta en un almacén?",
         options: [
             "Sí, en el barrio sí.", 
             "No, todo producto envasado para la venta debe tener rótulo reglamentario (RNE/RNPA).", 
@@ -1390,7 +1390,7 @@ const questionBank = [
             "Me las como."
         ],
         answer: 0,
-        explanation: "Todo alimento que fue servido y 'volvió' del salón se considera desecho, ya que pudo ser manipulado por el cliente."
+        explanation: "Todo alimento que fue servido y volvió del salón se considera desecho, ya que pudo ser manipulado por el cliente."
     },
     {
         id: 146,
@@ -1491,7 +1491,7 @@ const questionBank = [
     },
     {
         id: 154,
-        question: "En una VERDULERÍA, ¿se pueden vender bandejitas de 'sopa de verdura' cortada en el local?",
+        question: "En una VERDULERÍA, ¿se pueden vender bandejitas de sopa de verdura cortada en el local?",
         options: [
             "Sí, es práctico.",
             "No. Las verduras procesadas deben venir envasadas y rotuladas de un establecimiento habilitado.",
@@ -1589,7 +1589,7 @@ const questionBank = [
     },
     {
         id: 162,
-        question: "¿Existe la esterilización 'casera' segura para conservas?",
+        question: "¿Existe la esterilización casera segura para conservas?",
         options: [
             "Sí, hirviendo frascos en olla común.",
             "No. La esterilización real requiere autoclaves industriales a 130°C.",
@@ -1653,7 +1653,7 @@ const questionBank = [
     // --- TRANSPORTE Y RECEPCIÓN ---
     {
         id: 167,
-        question: "Si llega un camión habilitado pero con 'olor a combustible' en la caja:",
+        question: "Si llega un camión habilitado pero con olor a combustible en la caja:",
         options: [
             "Ventilo la mercadería y la uso.",
             "Rechazo la mercadería por contaminación química.",
@@ -1753,7 +1753,7 @@ const questionBank = [
     },
     {
         id: 175,
-        question: "¿Qué son los 'signos' de presencia de plagas?",
+        question: "¿Qué son los signos de presencia de plagas?",
         options: [
             "Ver al animal vivo.",
             "Excrementos, manchas de grasa en zócalos, envases roídos.",
@@ -1791,7 +1791,7 @@ const questionBank = [
     },
     {
         id: 178,
-        question: "¿Qué son los 'Grupos de Riesgo'?",
+        question: "¿Qué son los Grupos de Riesgo?",
         options: [
             "Los cocineros.",
             "Niños, Embarazadas, Ancianos e Inmunodeprimidos.",
@@ -1889,7 +1889,7 @@ const questionBank = [
     },
     {
         id: 186,
-        question: "¿Qué es la 'Contaminación Química'?",
+        question: "¿Qué es la Contaminación Química?",
         options: [
             "Bacterias.",
             "Restos de pesticidas, detergente mal enjuagado o metales pesados en la comida.",
@@ -1916,7 +1916,7 @@ const questionBank = [
         question: "¿Qué es el R.N.P.A.?",
         options: [
             "Registro Nacional de Productores.",
-            "Registro Nacional de Producto Alimenticio (el 'DNI' del producto).",
+            "Registro Nacional de Producto Alimenticio (el DNI del producto).",
             "Reglamento de Panaderías.",
             "Registro de Plagas."
         ],
@@ -1961,10 +1961,10 @@ const questionBank = [
     },
     {
         id: 192,
-        question: "¿Qué hacemos con los productos 'Vencidos' en el depósito?",
+        question: "¿Qué hacemos con los productos Vencidos en el depósito?",
         options: [
             "Los usamos rápido.",
-            "Se separan, se identifican como 'NO APTOS' y se eliminan antes de 48hs.",
+            "Se separan, se identifican como NO APTOS y se eliminan antes de 48hs.",
             "Se borra la fecha.",
             "Se regalan."
         ],
@@ -1981,7 +1981,7 @@ const questionBank = [
             "No se usa lavandina."
         ],
         answer: 1,
-        explanation: "Usar 'a ojo' es peligroso (intoxicación química) o inútil (no desinfecta). Se debe seguir la instrucción del fabricante. (Manual pág. 16)"
+        explanation: "Usar a ojo es peligroso (intoxicación química) o inútil (no desinfecta). Se debe seguir la instrucción del fabricante. (Manual pág. 16)"
     },
     {
         id: 194,
@@ -2005,7 +2005,7 @@ const questionBank = [
             "Solo verduras."
         ],
         answer: 1,
-        explanation: "Al descongelar, las bacterias se multiplican. Si re-congelas crudo, guardas una 'bomba' bacteriana. Al cocinar, 'reseteas' la carga bacteriana. (Manual pág. 27)"
+        explanation: "Al descongelar, las bacterias se multiplican. Si re-congelas crudo, guardas una bomba bacteriana. Al cocinar, reseteas la carga bacteriana. (Manual pág. 27)"
     },
     {
         id: 196,
@@ -2033,7 +2033,7 @@ const questionBank = [
     },
     {
         id: 198,
-        question: "¿Qué es el 'Saneamiento' según el manual?",
+        question: "¿Qué es el Saneamiento según el manual?",
         options: [
             "Tirar agua.",
             "Los procedimientos de Limpieza + Desinfección + Control de Plagas.",
@@ -2045,7 +2045,7 @@ const questionBank = [
     },
     {
         id: 199,
-        question: "¿Qué es un 'Portador Sano'?",
+        question: "¿Qué es un Portador Sano?",
         options: [
             "Alguien que come sano.",
             "Una persona que tiene gérmenes patógenos, no tiene síntomas, pero contagia.",
@@ -2068,3 +2068,4 @@ const questionBank = [
         explanation: "Las BPM son los procedimientos necesarios para garantizar que el alimento no enferme a nadie. (Manual pág. 11)"
     }
 ];
+
