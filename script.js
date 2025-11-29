@@ -19,9 +19,7 @@ const progressBar = document.getElementById('progress-fill');
 startBtn.addEventListener('click', startExam);
 nextBtn.addEventListener('click', () => navigateQuestion(1));
 finishBtn.addEventListener('click', finishExam);
-
 // Función: Iniciar Examen
-
 function startExam() {
     // 1. Categorizar preguntas
     const categorized = categorizeQuestions(questionBank);
@@ -35,8 +33,22 @@ function startExam() {
         ...getRandomItems(categorized.variadas, 4)
     ];
 
-    // 3. Mezclar las 20 preguntas finales para que no salgan en orden por tema
-    currentQuestions = shuffleArray(selectedQuestions);
+    // 3. Mezclar preguntas y mezclar opciones internas
+    currentQuestions = shuffleArray(selectedQuestions).map(q => {
+        // Copia superficial para no modificar el banco original
+        const qCopy = { ...q };
+
+        // Crear array de índices [0, 1, 2, 3] y mezclarlo
+        const indices = q.options.map((_, i) => i);
+        // Mezcla Fisher-Yates para los índices de opciones
+        for (let i = indices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        qCopy.shuffledIndices = indices;
+
+        return qCopy;
+    });
 
     // 4. Resetear variables
     userAnswers = {};
@@ -129,18 +141,20 @@ function showQuestion() {
     // Limpiar opciones anteriores
     optionsContainer.innerHTML = '';
 
-    // Generar botones de opciones
-    question.options.forEach((option, index) => {
+    // Generar botones de opciones (usando el orden mezclado)
+    question.shuffledIndices.forEach((originalIndex) => {
+        const optionText = question.options[originalIndex];
         const btn = document.createElement('button');
         btn.className = 'btn option-btn';
-        btn.textContent = option;
+        btn.textContent = optionText;
+        btn.dataset.originalIndex = originalIndex; // Guardamos el índice real
 
         // Si ya había respondido esta pregunta (al volver atrás), marcar la seleccionada
-        if (userAnswers[question.id] === index) {
+        if (userAnswers[question.id] === originalIndex) {
             btn.classList.add('selected');
         }
 
-        btn.onclick = () => selectOption(question.id, index);
+        btn.onclick = () => selectOption(question.id, originalIndex);
         optionsContainer.appendChild(btn);
     });
 
@@ -148,16 +162,19 @@ function showQuestion() {
 }
 
 // Función: Seleccionar Opción
-function selectOption(questionId, optionIndex) {
-    // Guardar respuesta
-    userAnswers[questionId] = optionIndex;
+function selectOption(questionId, originalIndex) {
+    // Guardar respuesta (índice original)
+    userAnswers[questionId] = originalIndex;
 
     // Actualizar UI (clase selected)
     const buttons = optionsContainer.children;
     for (let btn of buttons) {
         btn.classList.remove('selected');
+        // Comparamos con el dataset porque el orden visual es distinto
+        if (parseInt(btn.dataset.originalIndex) === originalIndex) {
+            btn.classList.add('selected');
+        }
     }
-    buttons[optionIndex].classList.add('selected');
 
     // Habilitar botón siguiente o finalizar
     updateNavigationButtons();
