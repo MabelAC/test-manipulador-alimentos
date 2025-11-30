@@ -222,6 +222,7 @@ body {
 #quiz-screen .card {
     border: 2px solid var(--primary);
     box-shadow: 0 0 15px rgba(0, 168, 191, 0.15);
+    padding: 3rem 2.5rem;
 }
 
 .option-btn {
